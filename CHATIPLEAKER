@@ -1,0 +1,34 @@
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local cooldownTimer = 0
+
+local button = Instance.new("TextButton")
+button.Parent = script.Parent
+button.Text = "Track IP"
+button.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- Green color
+
+function button.MouseButton1Click:Connect(function()
+    if cooldownTimer == 0 then
+        cooldownTimer = 50
+        LocalPlayer:Chat("Welcome To IP Leaker V1.21")
+        wait(1)
+        LocalPlayer:Chat("Please Wait While We Track Username VictimUsername")
+        wait(1)
+        LocalPlayer:Chat("Tracking IP...")
+        wait(1)
+        LocalPlayer:Chat("Successfully Tracked IP")
+        wait(1)
+        LocalPlayer:Chat("Tracking Country...")
+        wait(1)
+        LocalPlayer:Chat("Successfully Tracked Country")
+        wait(1)
+        LocalPlayer:Chat("Thank you for You're Corporation See You Later")
+
+        -- Cooldown Timer
+        while cooldownTimer > 0 do
+            wait(1)
+            cooldownTimer = cooldownTimer - 1
+        end
+    end
+end)
